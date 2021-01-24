@@ -1,0 +1,22 @@
+{{#each this}}
+
+<li class="list-item">
+    <div class="block-news">
+        <a href="{{url}}" target="_blanc" title="{{author}}" class="link-article">
+            <img class="news-image" src="{{urlToImage}}" alt="news image" />
+        </a>
+        <div class="stats">
+            <p class="stats-item">
+                <i class="material-icons">home</i>
+                {{title}}
+            </p>
+            <p class="stats-item">
+                <i class="material-icons">book</i>
+                {{description}}
+            </p>
+
+        </div>
+    </div>
+</li>
+
+{{/each}}
