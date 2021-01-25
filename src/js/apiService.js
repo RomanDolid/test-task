@@ -1,22 +1,18 @@
 import axios from 'axios';
 import newsRender from './newsRender';
 
-const apiKey = 'dfe51acaeb93423681f9593a203ef679';
-const options = {
-  headers: {
-    Authorization: apiKey,
-  },
-};
+
  const fetchNews = {
-  baseUrl: 'http://newsapi.org/v2/everything',
+  baseUrl: 'https://pixabay.com/api/',
   query: '',
-  pageSize: 10,
+  settings: '?image_type=photo&orientation=horizontal',
   page: 1,
+  perPage: 12,
+  key: '19986694-2a4121189ab57813819af57bc',
 
   fetchNewses: async (query, page) => {
     const { data } = await axios.get(
-      `${fetchNews.baseUrl}?q=${query}&pageSize=${fetchNews.pageSize}&page=${page}`, options
-    );
+      `${fetchNews.baseUrl}${fetchNews.settings}&q=${query}&page=${page}&per_page=${fetchNews.perPage}&key=${fetchNews.key}`);
 
     return newsRender.getNewsArray(data);
   },

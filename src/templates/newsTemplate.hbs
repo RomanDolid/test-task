@@ -2,17 +2,17 @@
 
 <li class="list-item">
     <div class="block-news">
-        <a href="{{url}}" target="_blanc" title="{{author}}" class="link-article">
-            <img class="news-image" src="{{urlToImage}}" alt="news image" />
+        <a href="{{pageURL}}" target="_blanc" title="{{author}}" class="link-article">
+            <img class="news-image" src="{{webformatURL}}" alt="news image" />
         </a>
         <div class="stats">
             <p class="stats-item">
                 <i class="material-icons">home</i>
-                {{title}}
+                {{user}}
             </p>
             <p class="stats-item">
                 <i class="material-icons">book</i>
-                {{description}}
+                {{tags}}
             </p>
 
         </div>
@@ -20,3 +20,4 @@
 </li>
 
 {{/each}}
+

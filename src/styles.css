@@ -84,7 +84,7 @@ ul {
 
 .block-news {
   display: flex;
-  max-width: 600px;
+  max-width: 320px;
   margin-top: 10px;
   margin-bottom: 10px;
   border: 1px solid grey;
@@ -92,8 +92,6 @@ ul {
 
 .news-image {
   width: 100%;
-  max-width: 320px;
-  height: 200px;
   margin: 0;
   padding: 0;
 }

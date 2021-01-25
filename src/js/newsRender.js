@@ -5,13 +5,13 @@ refs.btnPrev.disabled = true;
 refs.btnNext.disabled = true;
 
 const newsRender = {
-  getNewsArray: async ({ articles }) => {
+  getNewsArray: async ({ hits }) => {
     if (Number(localStorage.getItem('page')) === 1) {
       refs.newsList.innerHTML = '';
       refs.btnPrev.disabled = true;
     }
 
-    const newsMarkup = newsTemplate(articles);
+    const newsMarkup = newsTemplate(hits);
     return newsRender.render(newsMarkup);
   },
 
